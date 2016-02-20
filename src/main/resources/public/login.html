@@ -19,6 +19,7 @@
 
        }
     </style>
+    <script type="text/javascript" src="js/test.js"></script> 
   </head>
   <body>
 
@@ -45,7 +46,7 @@
                   <a title="New Released" href="#">New Released</a>
                 </li>
                 <li>
-                  <a title="Categeries" href="#">Categeries</a>
+                  <a title="Categeries" href="cate.html">Categeries</a>
                     <ul>
                      <li>
                           <a title="Sub Sub Link 1" href="#">Sub Sub Link 1</a>
@@ -107,17 +108,20 @@
     <div class="textintro">
       <h1>Hi there!</h1>
       <p>Log-in to access the awesomeness!</p>
+      <p id="login"></p>
     </div>
-
+   
     <fieldset>
-      <input type="email" name="email" placeholder="Email">
+      <input id="email" type="email" name="email" placeholder="Email">
       <br/>
-      <input type="password" name="password" placeholder="Password">
+      <input id="psw" type="password" name="password" placeholder="Password">
     </fieldset>
 
-    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn" onclick="loginCheck()">Login</button>
     <p>or <a href="register.html">register</a></p>
+
   </form>
+
 </section>
 
 
