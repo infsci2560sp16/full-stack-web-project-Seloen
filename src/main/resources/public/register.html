@@ -111,10 +111,23 @@
     </div>
 
     <fieldset>
-      <input id="first" type="text" name="firstname" placeholder="First Name">
-      <input id="last" type="text" name="lastname" placeholder="Last Name">
-      <input id="email" type="email" name="email" placeholder="Email">
-      <input id="psw" type="password" name="password" placeholder="Password">
+      
+      <p>
+        <label class="control-lable" for="first">First Name:</label>
+        <input id="first" type="text" name="firstname" placeholder="First Name">
+      </p>
+      <p>
+        <label class="control-lable" for="last">Last Name:</label>
+        <input id="last" type="text" name="lastname" placeholder="Last Name">
+      </p>
+      <p>
+        <label class="control-lable" for="email">Your Email:</label>
+        <input id="email" type="email" name="email" placeholder="Email">
+      </p>
+      <p>
+        <label class="control-lable" for="psw">Passwords:</label>
+        <input id="psw" type="password" name="password" placeholder="Password">
+      </p>  
     </fieldset>
 
     <button type="submit" class="btn" onclick=registerCheck()>Register</button>

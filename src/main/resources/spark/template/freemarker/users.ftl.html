@@ -98,44 +98,20 @@
 				</ul>
 			</nav>
 
-			<section class="info">
-				<h2 style="display: none;">hot topics</h2>
-
-				<aside>
-					<div class="content topic1">
-						<h3><a href="hot.html">hot topic 1</a></h3>
-			            <p>the 2016 Oscar ceremony</p>
-			        </div>
-			    </aside>
-
-			    <aside>
-					<div class="content topic2">
-						<h3><a href="hot.html">hot topic 2</a></h3>
-			            <p>Will "Queen Kate" win this year's leading actress again? </p>
-			        </div>
-			    </aside>
-
-			    <aside>
-					<div class="content topic3">
-						<h3><a href="hot.html">hot topic 3</a></h3>
-			            <p>Star trek </p>
-			        </div>
-			    </aside>
-
-			</section>
-
-
+		
 
 
 
 
 			<section class="club">
-				<h2 style="display: none;">club</h2>
-				<article>
-			  		   <h2>Join in our movie production club now!</h2>
-			  		   <p>contents about the club</p>
-			  		   <a class="btn" title="Learn more" href="#">Learn More</a>
-				</article>
+				Hello, ${username}
+				<#if country??>
+				You haven't marked any location yet!
+				<#else >
+				<#list countries as country>
+				${country}
+				</#list>
+				</#if>
 			</section>
 
 
@@ -144,8 +120,6 @@
 		</div>
 
 <div>
-
-<a href="/userinfo"> Personal page</a>
 <p>Please input a number between 1 and 10:</p>
 
 <input id="numb">
