@@ -23,12 +23,12 @@ public class Userinfo {
 
 
     private void getUserinfo() {
-            String interest[]  = {"horror","comedy"};
+            String country[]  = {"horror","comedy"};
             get("/userinfo", (req, res) -> {
 
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("username","User1");
-                attributes.put("interests",interest);
+                attributes.put("countries",country);
 
                
            return new ModelAndView(attributes, "userinfo.ftl");

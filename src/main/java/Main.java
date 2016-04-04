@@ -24,7 +24,7 @@ public class Main {
 
     //port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
-     Object r = new Userinfo();
+     Object r3 = new Userinfo();
       
     get("/hello", (req, res) -> "Hello World");
 //      get("/hello", (req, res) -> {

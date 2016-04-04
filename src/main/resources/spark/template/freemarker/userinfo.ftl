@@ -102,13 +102,13 @@
 
 			<section class="club">
 				Hello, ${username}
-				 <#if interest??>
+				 <#if country??>
     <div id ="userinfo">You haven't marked any location yet!</div>
     <#else >
 
     <ul>
-      <#list interests as interest>
-      <li> ${interest}</li>
+      <#list countries as country>
+      <li> ${country}</li>
     </ul>
       </#list>
     </div>
