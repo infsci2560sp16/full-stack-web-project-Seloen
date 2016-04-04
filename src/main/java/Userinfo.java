@@ -6,7 +6,7 @@ import java.util.Map;
 
 import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
-import static spark.Spark.get;
+import static spark.Spark.*;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
 import java.text.SimpleDateFormat;
@@ -21,16 +21,18 @@ public class Userinfo {
         getUserinfo();
     }
 
+
     private void getUserinfo() {
-            String country[]  = {"China","United States"};
+            String interest[]  = {"horror","comedy"};
             get("/userinfo", (req, res) -> {
 
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("username","User1");
-                attributes.put("countries",country);
+                attributes.put("interests",interest);
 
-                return new ModelAndView(attributes, "users.ftl");
-              }, new FreeMarkerEngine());
+               
+           return new ModelAndView(attributes, "userinfo.ftl");
+           }, new FreeMarkerEngine());
     }
 
 

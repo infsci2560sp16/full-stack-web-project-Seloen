@@ -16,7 +16,6 @@
 			color: #555;
 			padding: 0;
 
-
 	     }
 		</style>
 		<script type="text/javascript" src="js/test.js"></script> 
@@ -101,17 +100,9 @@
 		
 
 
-
-
 			<section class="club">
 				Hello, ${username}
-				<#if country??>
-				You haven't marked any location yet!
-				<#else >
-				<#list countries as country>
-				${country}
-				</#list>
-				</#if>
+				
 			</section>
 
 

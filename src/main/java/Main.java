@@ -22,9 +22,9 @@ public class Main {
 
   public static void main(String[] args) {
 
-    port(Integer.valueOf(System.getenv("PORT")));
+    //port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
-     Object r3 = new Userinfo();
+     Object r = new Userinfo();
       
     get("/hello", (req, res) -> "Hello World");
 //      get("/hello", (req, res) -> {
@@ -69,6 +69,21 @@ public class Main {
         if (connection != null) try{connection.close();} catch(SQLException e){}
       }
     }*/
+      
+//      String country[]  = {"China","United States"};
+//      get("/userinfo", (req, res) -> {
+//          
+//          Map<String, Object> attributes = new HashMap<>();
+//          attributes.put("username","User1");
+//          attributes.put("countries",country);
+//          
+//          
+//          return new ModelAndView(attributes, "userinfo.ftl");
+//      }, new FreeMarkerEngine());
+      
+      
+      
+      
        get("/db", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
