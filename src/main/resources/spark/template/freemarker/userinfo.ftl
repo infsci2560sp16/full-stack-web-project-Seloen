@@ -26,7 +26,7 @@
 		<div id="page">
 
 			<header>
-				<a class="logo" title="Movie Reviewer" href="#">Movie Reviewer</a>
+				<a class="logo" title="Movie Reviewer" href="index.html">Movie Reviewer</a>
 				
 				<a class="btn" title="Login" href="login.html">Login</a>
 			    <a class="btn" title="Sign up" href="register.html">Sign up</a>
@@ -99,16 +99,22 @@
 
 		
 
+				
 
 			<section class="club">
 				Hello, ${username}
-				 <#if country??>
-    <div id ="userinfo">You haven't marked any location yet!</div>
-    <#else >
 
+				 <#if country??>
+    <div id ="userinfo">You haven't choose any interested category of movies.
+
+
+    </div>
+
+    <#else >
+    <p>Your intereted tags:</p>
     <ul>
       <#list countries as country>
-      <li> ${country}</li>
+      <li>${country}</li>
     </ul>
       </#list>
     </div>
