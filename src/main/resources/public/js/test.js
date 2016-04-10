@@ -27,4 +27,26 @@ function registerCheck() {
     } else {
         alert("success!");
     }
-}    
+} 
+
+function getXml(){
+    $.ajax({
+         url : "/about",
+         type : "get",
+         success : function(result) {
+           branch = result.getElementsByTagName("Movie");
+           $("div.about").append(
+               '<p>Name:'+branch[0].childNodes[0].firstChild.nodeValue+'</p>'+
+               '<p>Catetory:'+branch[0].childNodes[1].firstChild.nodeValue+'</p>'+
+               '<p>Year:'+branch[0].childNodes[2].firstChild.nodeValue+'</p>'+
+               '<p>Country:'+branch[0].childNodes[3].firstChild.nodeValue+'</p>'+
+               '<p>Director:'+branch[0].childNodes[4].firstChild.nodeValue+'</p>'+
+               '<p>LeadingActor:'+branch[0].childNodes[5].firstChild.nodeValue+'</p>'+
+               '<p>Duration:'+branch[0].childNodes[6].firstChild.nodeValue+'</p>'+
+               '<p>Cost:'+branch[0].childNodes[7].firstChild.nodeValue+'</p>'+
+               '<p>Profit:'+branch[0].childNodes[8].firstChild.nodeValue+'</p>'+
+               '<p>Awards:'+branch[0].childNodes[9].firstChild.nodeValue+'</p>'
+             );
+           }
+         });
+       }   

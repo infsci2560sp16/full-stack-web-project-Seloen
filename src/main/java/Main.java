@@ -21,8 +21,8 @@ import org.jscience.physics.amount.Amount;
 public class Main {
 
   public static void main(String[] args) {
-
-    //port(Integer.valueOf(System.getenv("PORT")));
+   
+    port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
      Object r3 = new Userinfo();
       
@@ -43,6 +43,45 @@ public class Main {
             return new ModelAndView(attributes, "index.ftl");
 
     }, new FreeMarkerEngine());
+
+
+
+     get("/about", (req, res) -> {
+
+          Connection connection = null;
+          
+
+          Map<String, Object> attributes = new HashMap<>();
+          try {
+
+
+              String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+             
+
+                  xml += "<Movie>";
+                  xml += "<Name>Resident Evil</Name>";
+                  xml += "<Category>Thrilling</Category>";
+                  xml += "<Year>2000</Year>";
+                  xml += "<Country>United States</Country>";
+                  xml += "<Director>David</Director>";
+                  xml += "<LeadingActor>Milla Jovovich</LeadingActor>";
+                  xml += "<Duration>115 minutes</Duration>";
+                  xml += "<Cost>1,000,000</Cost>";
+                  xml += "<Profit>2,000,000</Profit>";
+                  xml += "<Awards>none</Awards>";
+                  xml += "</Movie>";
+
+            
+              res.type("text/xml");
+              return xml;
+
+          } catch (Exception e) {
+              attributes.put("message", "There was an error: " + e);
+              return attributes;
+          } finally {
+              if (connection != null) try{connection.close();} catch(SQLException e){}
+          }
+      });
 
     /*get("/db", (req, res) -> {
       Connection connection = null;

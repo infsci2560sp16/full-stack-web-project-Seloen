@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Movie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="about.xsd">
+
+
+  <Name>Resident Evil</Name>
+  <Category>Thrilling</Category>
+  <Year>2000</Year>
+  <Country>United States</Country>
+  <Director>David</Director>
+  <LeadingActor>Milla Jovovich</LeadingActor>
+  <Duration>115 minutes</Duration>
+  <Cost>1,000,000</Cost>
+  <Profit>2,000,000</Profit>
+  <Awards>none</Awards>
+
+</Movie>
+

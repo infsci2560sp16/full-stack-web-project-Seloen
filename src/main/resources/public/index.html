@@ -50,7 +50,7 @@
 					    		<a title="Categories" href="cate.html">Categeries</a>
 					    		  <ul>
 					    			 <li>
-					    			    	<a title="Sub Sub Link 1" href="#">Sub Sub Link 1</a>
+					    			    	<a title="Sub Sub Link 1" onclick="getXml()">Thrilling</a>
 					    			 </li>
 					    		    	<li>
 					    				    <a title="Sub Sub Link 2" href="#">Sub Sub Link 2</a>
@@ -98,6 +98,9 @@
 					</li>
 				</ul>
 			</nav>
+			  <input type="button" value="GetXml" onclick="getXml()">
+          
+			<div class="about"></div>
 
 			<section class="info">
 				<h2 style="display: none;">hot topics</h2>
@@ -146,7 +149,7 @@
 
 <div>
 
-<a href="/userinfo"> Personal page</a>
+<a href="/userinfo">Personal page</a>
 <p>Please input a number between 1 and 10:</p>
 
 <input id="numb">
